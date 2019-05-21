@@ -308,7 +308,7 @@ class ME_NLP:
         from cobrame import mu
 
         me = self.me
-        S = me.construct_S(mu_fix).tocsc()
+        S = self.construct_S(mu_fix).tocsc()
         xl = np.matrix([r.lower_bound for r in me.reactions]).transpose()
         xu = np.matrix([r.upper_bound for r in me.reactions]).transpose()
         # Also substitute mu in bounds
